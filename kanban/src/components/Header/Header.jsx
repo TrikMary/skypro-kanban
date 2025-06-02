@@ -1,6 +1,17 @@
 import { PopUser } from "../PopUser/PopUser";
+import { useState } from "react";
 
-export function Header () {
+
+export function Header ({ addCard }) {
+
+// Создаем состояние изначально закрытого окошка
+  const [isOpen, setIsOpen] = useState(false)
+  // Функция по смене состояния на противоположное
+  const toogleOpenUser = () => {
+    setIsOpen (prev => !prev)
+  
+    }
+
     return (
         <header className="header">
         <div className="container">
@@ -16,13 +27,17 @@ export function Header () {
               </a>
             </div>
             <nav className="header__nav">
-              <button className="header__btn-main-new _hover01" id="btnMainNew">
-                <a href="#popNewCard">Создать новую задачу</a>
+              {/* добавляем функциюю добавления карточки на кнопку */}
+              <button className="header__btn-main-new _hover01" id="btnMainNew" onClick={addCard}>
+              <p>Создать новую задачу</p>
+                {/* <a href="#popNewCard">Создать новую задачу</a> */}
               </button>
-              <a href="#user-set-target" className="header__user _hover02">
+              <a href="#user-set-target" className="header__user _hover02" onClick={toogleOpenUser}>
                 Ivan Ivanov
               </a>
-            <PopUser />
+              {/* Что будет если открыть окошко */}
+              {isOpen && <PopUser />}
+
             </nav>
           </div>
         </div>
