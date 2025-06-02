@@ -7,9 +7,11 @@ import { Header } from "./components/Header/Header";
 import { PopNewCard } from "./components/PopNewCard/PopNewCard";
 import { PopBrowse } from "./components/PopBrowse/PopBrowse";
 import { PopExit } from "./components/PopUps/PopUps";
+import { cardList } from "./data.js";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [cards, setCards] = useState(cardList)
+
 
   return (
   <div className="wrapper">
@@ -22,7 +24,7 @@ function App() {
     <Header />
 
 
-    <Main />
+    <Main cards={cards}/>
 
 
   </div>

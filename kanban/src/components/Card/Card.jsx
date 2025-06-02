@@ -1,6 +1,6 @@
 
 
-export function Card ({ topic, title }) {
+export function Card ({ topic, title, key, date }) {
     return (
         <div className="cards__item">
         <div className="cards__card card">
@@ -19,6 +19,7 @@ export function Card ({ topic, title }) {
           <div className="card__content">
             <a href="" target="_blank">
               <h3 className="card__title">{title}</h3>
+              <p>номер {key}</p>
             </a>
             <div className="card__date">
               <svg
@@ -49,7 +50,8 @@ export function Card ({ topic, title }) {
                   </clipPath>
                 </defs>
               </svg>
-              <p>30.10.23</p>
+              
+              <p>{date}</p>
             </div>
           </div>
         </div>

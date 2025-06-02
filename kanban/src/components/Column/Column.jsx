@@ -1,14 +1,14 @@
 import { cardList } from "../../data.js";
 import { Card } from "../Card/Card";
 
-export function Column () {
+export function Column ({title, cards }) {
     return (
         <div className="main__column column">
         <div className="column__title">
-          <p>Без статуса</p>
+          <p>{title}</p>
         </div>
         <div className="cards">
-       {cardList.map( (card) => {
+       {cards.map( (card) => {
         return (
           <Card 
             key = {card.id}

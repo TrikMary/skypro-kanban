@@ -1,16 +1,23 @@
-import { Card } from "../Card/Card";
+
 
 import { Column } from "../Column/Column";
-import { statusList, cardList} from "../../data.js";
+import { statusList } from "../../data.js";
 
-export function Main ({  }) {
+export function Main ({cards}) {
     return (
       <main className="main">
         <div className="container">
           <div className="main__block">
             <div className="main__content">
-              <Column />
-
+              {statusList.map((status, i) => (
+                <Column 
+                    key = {i}
+                    title = {status}
+                    cards = {cards.filter((card) => card.status === status)}  
+                             
+                />
+              ) 
+              )}
 
             </div>
           </div>
