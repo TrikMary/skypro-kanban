@@ -1,3 +1,4 @@
+import { cardList } from "../../data.js";
 import { Card } from "../Card/Card";
 
 export function Column () {
@@ -7,8 +8,19 @@ export function Column () {
           <p>Без статуса</p>
         </div>
         <div className="cards">
-        <Card />
-        <Card />
+       {cardList.map( (card) => {
+        return (
+          <Card 
+            key = {card.id}
+            title = {card.title}
+            topic = {card.topic}
+            date = {card.date}
+          />
+        )
+       })}
+       
+
+        
         </div>
       </div>
     );
