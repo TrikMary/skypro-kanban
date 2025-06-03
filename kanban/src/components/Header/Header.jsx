@@ -32,9 +32,9 @@ export function Header ({ addCard }) {
               <p>Создать новую задачу</p>
                 {/* <a href="#popNewCard">Создать новую задачу</a> */}
               </button>
-              <a href="#user-set-target" className="header__user _hover02" onClick={toogleOpenUser}>
+              <div className="header__user _hover02" onClick={toogleOpenUser}>
                 Ivan Ivanov
-              </a>
+              </div>
               {/* Что будет если открыть окошко */}
               {isOpen && <PopUser />}
 

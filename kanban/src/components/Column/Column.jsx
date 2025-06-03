@@ -1,4 +1,4 @@
-import { cardList } from "../../data.js";
+
 import { Card } from "../Card/Card";
 
 export function Column ({title, cards }) {
