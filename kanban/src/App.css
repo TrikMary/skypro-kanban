@@ -25,6 +25,10 @@ ul li {
   list-style: none;
 }
 
+.pop_user_focus {
+  cursor: pointer;
+}
+
 @keyframes card-animation {
   0% {
     height: 0;
