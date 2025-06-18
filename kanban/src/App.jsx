@@ -9,6 +9,7 @@ import { PopNewCard } from "./components/PopNewCard/PopNewCard";
 import { PopBrowse } from "./components/PopBrowse/PopBrowse";
 import { PopExit } from "./components/PopUps/PopUps";
 import { cardList } from "./data.js";
+import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 
 function App() {
 // { Добавляем состояние нашего списка }
@@ -39,28 +40,30 @@ useEffect(() => {
 }, [loading]);
 
   return (
-   
-  <div className="wrapper">
-    {/* pop-up start*/}
-    <PopExit />
-    <PopNewCard />
-    <PopBrowse />
-    {/* pop-up end*/}
-    
-    {/* имитация загрузки */}
+    <>
+      <GlobalStyle />
+      <Wrapper>
+        {/* pop-up start*/}
+        <PopExit />
+        <PopNewCard />
+        <PopBrowse />
+        {/* pop-up end*/}
+        
+        {/* имитация загрузки */}
 
-    
+        
 
-    <Header addCard={addCard}/>
+        <Header addCard={addCard}/>
 
-    {/* Передаем новый список карточек */}
-    {loading ? <div className="page_loader">Данные загружаются...</div> :
-    <Main cards={cards}/> }
-  
+        {/* Передаем новый список карточек */}
+        {loading ? <div className="page_loader">Данные загружаются...</div> :
+        <Main cards={cards}/> }
+      
 
 
-  </div>
-  
+      </Wrapper>
+      {/* </GlobalStyle> */}
+    </>
   );
 }
 
