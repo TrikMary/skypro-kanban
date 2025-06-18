@@ -98,3 +98,7 @@ export const Hover03 = css`
 }
 
 `
+
+export const Button = styled.button`
+
+`
