@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 
 
 export const GlobalStyle = createGlobalStyle`
@@ -60,4 +60,41 @@ export const Wrapper = styled.div`
   overflow: hidden;
   background-color: #F1F1F1;
 }
+`;
+
+export const Hover01 = css`
+&:hover {
+    background-color: #33399b;
+}
+`;
+
+export const Hover02 = css`
+&:hover {
+    color: #33399b;
+    &::after {
+        border-left-color: #33399b;
+        border-bottom-color: #33399b;
+    }
+}
+`
+export const HoverHeaderUser = css`
+&:hover {
+    color: #33399b;
+    &::after {
+        border-left-color: #33399b;
+        border-bottom-color: #33399b;
+    }
+}
+`
+
+export const Hover03 = css`
+&:hover {
+  background-color: #33399b;
+  color: #FFFFFF;
+
+  a {
+    color: #FFFFFF;
+  }
+}
+
 `

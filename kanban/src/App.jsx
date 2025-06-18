@@ -7,7 +7,7 @@ import { Main } from "./components/Main/Main";
 import { Header } from "./components/Header/Header";
 import { PopNewCard } from "./components/PopNewCard/PopNewCard";
 import { PopBrowse } from "./components/PopBrowse/PopBrowse";
-import { PopExit } from "./components/PopUps/PopUps";
+import { PopExit } from "./components/PopExit/PopExit.jsx";
 import { cardList } from "./data.js";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
 

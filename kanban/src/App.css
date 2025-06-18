@@ -62,25 +62,25 @@ body {
   padding: 0 30px;
 }
 
-._hover01:hover {
+/* ._hover01:hover {
   background-color: #33399b;
-}
+} */
 
-._hover02:hover, .header__user:hover {
+/* ._hover02:hover, .header__user:hover {
   color: #33399b;
-}
-._hover02:hover::after, .header__user:hover::after {
+} */
+/* ._hover02:hover::after, .header__user:hover::after {
   border-left-color: #33399b;
   border-bottom-color: #33399b;
-}
+} */
 
-._hover03:hover {
+/* ._hover03:hover {
   background-color: #33399b;
   color: #FFFFFF;
-}
-._hover03:hover a {
+} */
+/* ._hover03:hover a {
   color: #FFFFFF;
-}
+} */
 
 .pop-user-set:target,
 .pop-exit:target,
