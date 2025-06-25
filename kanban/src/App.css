@@ -839,13 +839,13 @@ body {
   display: block;
   position: relative;
 } */
-.cards__item {
+/* .cards__item {
   padding: 5px;
   animation-name: card-animation;
   animation-duration: 500ms;
   animation-timing-function: linear;
-}
-.cards__card {
+} */
+/* .cards__card {
   width: 220px;
   height: 130px;
   background-color: #FFFFFF;
@@ -855,16 +855,16 @@ body {
   align-items: flex-start;
   justify-content: stretch;
   padding: 15px 13px 19px;
-}
+} */
 
-.card__group {
+/* .card__group {
   width: 100%;
   height: 20px;
   margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 .card__theme {
   width: auto;
   height: 20px;
@@ -890,21 +890,21 @@ body {
   border-radius: 50%;
   background-color: #94A6BE;
 }
-.card__title {
+/* .card__title {
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
   color: #000000;
   margin-bottom: 10px;
-}
-.card__content {
+} */
+/* .card__content {
   height: 64px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-}
-.card__date {
+} */
+/* .card__date {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -918,7 +918,7 @@ body {
   line-height: 13px;
   color: #94A6BE;
   letter-spacing: 0.2px;
-}
+} */
 
 @media screen and (max-width: 1200px) {
   .main__block {
