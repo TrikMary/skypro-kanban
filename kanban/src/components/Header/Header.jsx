@@ -1,6 +1,8 @@
 import { PopUser } from "../PopUser/PopUser";
 import { useState } from "react";
 
+import * as S from "./Header.styled.js"
+
 
 export function Header ({ addCard }) {
 
@@ -13,34 +15,34 @@ export function Header ({ addCard }) {
     }
 
     return (
-        <header className="header">
-        <div className="container">
-          <div className="header__block">
-            <div className="header__logo _show _light">
+        <S.Header>
+        <S.Container>
+          <S.HeaderBlock>
+            <S.HeaderLogoLight>
               <a href="" target="_self">
                 <img src="images/logo.png" alt="logo" />
               </a>
-            </div>
-            <div className="header__logo _dark">
+            </S.HeaderLogoLight>
+            <S.HeaderLogoDark>
               <a href="" target="_self">
                 <img src="images/logo_dark.png" alt="logo" />
               </a>
-            </div>
-            <nav className="header__nav">
+            </S.HeaderLogoDark>
+            <S.HeaderNav className="header__nav">
               {/* добавляем функциюю добавления карточки на кнопку */}
-              <button className="header__btn-main-new _hover01" id="btnMainNew" onClick={addCard}>
+              <S.HeaderBtnMainNew id="btnMainNew" onClick={addCard}>
               <p>Создать новую задачу</p>
                 {/* <a href="#popNewCard">Создать новую задачу</a> */}
-              </button>
-              <button className="header__user _hover02 pop_user_focus" onClick={toogleOpenUser}>
+              </S.HeaderBtnMainNew>
+              <S.HeaderUserBtn onClick={toogleOpenUser}>
                 Ivan Ivanov
-              </button>
+              </S.HeaderUserBtn>
               {/* Что будет если открыть окошко */}
               {isOpen && <PopUser />}
 
-            </nav>
-          </div>
-        </div>
-      </header>
+            </S.HeaderNav>
+          </S.HeaderBlock>
+        </S.Container>
+      </S.Header>
     );
 }
