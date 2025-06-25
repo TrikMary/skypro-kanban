@@ -10,6 +10,8 @@ import { PopBrowse } from "./components/PopBrowse/PopBrowse";
 import { PopExit } from "./components/PopExit/PopExit.jsx";
 import { cardList } from "./data.js";
 import { GlobalStyle, Wrapper } from "./globalStyle.styled.js";
+import { ThemeProvider } from "styled-components";
+import { light, dark } from "./theme.js";
 
 function App() {
 // { Добавляем состояние нашего списка }
@@ -39,31 +41,39 @@ useEffect(() => {
   }, 3000);
 }, [loading]);
 
+const [changeTheme, setChangeTheme] = useState("light");
+
+
   return (
-    <>
-      <GlobalStyle />
-      <Wrapper>
-        {/* pop-up start*/}
-        <PopExit />
-        <PopNewCard />
-        <PopBrowse />
-        {/* pop-up end*/}
+    <ThemeProvider theme={changeTheme === "light" ? light : dark}>
+      <>
+        <GlobalStyle />
+        <Wrapper>
+          {/* pop-up start*/}
+          <PopExit />
+          <PopNewCard />
+          <PopBrowse />
+          {/* pop-up end*/}
+          
+          {/* имитация загрузки */}
+
+          
+
+          <Header addCard={addCard}
+                  setChangeTheme = {setChangeTheme}
+                  changeTheme = {changeTheme}
+                  />
+
+          {/* Передаем новый список карточек */}
+          {loading ? <div className="page_loader">Данные загружаются...</div> :
+          <Main cards={cards}/> }
         
-        {/* имитация загрузки */}
-
-        
-
-        <Header addCard={addCard}/>
-
-        {/* Передаем новый список карточек */}
-        {loading ? <div className="page_loader">Данные загружаются...</div> :
-        <Main cards={cards}/> }
-      
 
 
-      </Wrapper>
-      {/* </GlobalStyle> */}
-    </>
+        </Wrapper>
+        {/* </GlobalStyle> */}
+      </>
+    </ThemeProvider>
   );
 }
 

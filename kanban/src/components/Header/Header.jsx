@@ -4,7 +4,7 @@ import { useState } from "react";
 import * as S from "./Header.styled.js"
 
 
-export function Header ({ addCard }) {
+export function Header ({ addCard, changeTheme, setChangeTheme }) {
 
 // Создаем состояние изначально закрытого окошка
   const [isOpen, setIsOpen] = useState(false)
@@ -38,7 +38,8 @@ export function Header ({ addCard }) {
                 Ivan Ivanov
               </S.HeaderUserBtn>
               {/* Что будет если открыть окошко */}
-              {isOpen && <PopUser />}
+              {isOpen && <PopUser setChangeTheme = {setChangeTheme}
+                  changeTheme = {changeTheme} />}
 
             </S.HeaderNav>
           </S.HeaderBlock>

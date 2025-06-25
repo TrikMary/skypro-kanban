@@ -1,6 +1,11 @@
 import * as S from "./popUser.styled.js"
 
-export function PopUser () {
+export function PopUser ({changeTheme, setChangeTheme}) {
+
+  const onChangeTheme = () => {
+    setChangeTheme(changeTheme === "light" ?"dark":"light")
+  }
+
     return (
         <S.HeaderPopUserSet 
         // pop-user-set"
@@ -11,7 +16,9 @@ export function PopUser () {
         <S.PopUserSetMail>ivan.ivanov@gmail.com</S.PopUserSetMail>
         <S.PopUserSetTheme>
           <p>Темная тема</p>
-          <input type="checkbox" name="checkbox" />
+          <input checked = {changeTheme === "dark"} 
+                  onClick={onChangeTheme}
+                  type="checkbox" name="checkbox" />
         </S.PopUserSetTheme>
         <S.ButtonPopUserExit type="button">
           <a href="#popExit">Выйти</a>
