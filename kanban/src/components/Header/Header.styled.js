@@ -5,7 +5,7 @@ import { Hover01, Hover02 } from "../../globalStyle.styled";
 export const Header = styled.header`
   width: 100%;
   margin: 0 auto;
-  background-color: #FFFFFF;
+  background-color: ${({theme}) => theme.headerBG};
 `
 
 export const Container = styled.div`
@@ -38,7 +38,7 @@ export const HeaderLogoLight = styled(HeaderLogo)`
 `
 
 export const HeaderLogoDark = styled(HeaderLogo)`
-  display: none;
+
 `
 
 export const HeaderNav = styled.nav`
@@ -78,6 +78,7 @@ export const HeaderUserBtn = styled.button`
   line-height: 20px;
   color: #565EEF;
   border: none;
+  background-color: #FFFFFF;
 
   cursor: pointer;
   ${Hover02}
